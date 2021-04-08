@@ -16,7 +16,7 @@ students.batch = 16;
 console.log(students.batch);
 
 // 6. Add another key in the object with the value of the variable `isAdult`. The value of the key should be `true/false`
-students.isAdult = "true/false";
+students.isAdult = true;
 
 // 7. Using `console.log` print the value of `isAdult` key from the `students` object
 console.log(students.isAdult);
