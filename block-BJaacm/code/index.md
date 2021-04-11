@@ -23,10 +23,10 @@ let newUser = user;
 - `user === newUser;` //True both the variables contains the same memory address of the same object so output will be true
 - `user.name === newUser.name;` //true because these two variable are non primitive type it contains the memory address of the same object if name key in the object is changed it will be reflected in both the variables
 - `user.name == newUser.name;` //true because these two variable are non primitive type it contains the memory address of the same object if name key in the object is changed it will be reflected in both the variables
-- `user.sibling == newUser.sibling;` //true because these two variable are non primitive type it contains the memory address of the same object if sibling key in the object is changed it will be reflected in both the variables
-- `user.sibling === newUser.sibling;` //true because these two variable are non primitive type it contains the memory address of the same object if sibling key in the object is changed it will be reflected in both the variables
-- `user.sibling == allBrothers;` //false both variables are non primitive and both variable contains memory address of different object so the output will be false
-- `user.sibling === allBrothers;` //false both variables are non primitive and both variable contains memory address of different object so the output will be false
+- `user.sibling == newUser.sibling;` //true because these user.sibling and newUser.sibling points to same memory address so the output will be true 
+- `user.sibling === newUser.sibling;` //true because these user.sibling and newUser.sibling points to same memory address so the output will be true 
+- `user.sibling == allBrothers;` //false both user.sibling ans allbrother  are non primitive and both vcontains memory address of different object so the output will be false
+- `user.sibling === allBrothers;` //false both user.sibling ans allbrother  are non primitive and both vcontains memory address of different object so the output will be false
 - `brothersCopy === allBrothers;`//false both variables are non primitive and both variable contains memory address of different object so the output will be false
 - `brothersCopy == allBrothers;` //false both variables are non primitive and both variable contains memory address of different object so the output will be false
 - `brothersCopy == user.sibling;` //true both brothersCopy variable and user.sibling has the same memory adress so the output will be true 
