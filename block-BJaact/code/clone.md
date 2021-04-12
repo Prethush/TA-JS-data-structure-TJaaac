@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // "Arya" both person2 and person contains the same memory address if any change made by any othe variable it will be reflected in both
+console.log(person.firstName); // "Arya" here the key firstName' value is changed to Arya
+console.log(person.lastName); //"Doe" the value of key lastName in person object is "Doe"
+console.log(person == person2); // true both variable contains same memory address
+console.log(person === person2); // true both variable contains same memory address
+console.log(person.lastName === person2.lastName); // // "Arya" both person2 and person contains the same memory address if any change made by any othe variable it will be reflected in both
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // "John" here person is cloned in to the variable personTwo so both contains different memory address
+console.log(person.firstName); // "Arya" here we are changing the value of the key firstName in the object person to "Arya"
+console.log(personTwo.lastName); // "Doe" here person is cloned in to the variable personTwo so both contains different memory address
+console.log(person.firstName === personTwo.firstName); // false here both person.firstName and personTwo.firstName contains different value
+console.log(person == personTwo); // false both the variables contain different memory address
+console.log(person === personTwo); // false both the variables contain different memory address
+console.log(person.address === personTwo.address); // True both person.address and person2.address contain the same memory address
+console.log(person.address == personTwo.address); // True both person.address and person2.address contain the same memory address
+console.log(personTwo.address.city); // "San Jose" The value of personTwo.address.city key is "San Jose"
+console.log(person.address.city); // "San Jose" The value of person.address.city key is "San Jose"
+console.log(person.address.city == personTwo.address.city); // true both the keys contain the same value
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,18 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // "John" here person is cloned in to the variable personTwo
+console.log(person.firstName); // "Arya" here the value of the key firstName is changed to "Arya"
+console.log(personTwo.lastName); // "Doe" here person is cloned in to the variable personTwo
+console.log(person.firstName === personTwo.firstName); // false here both person.firstName and personTwo.firstName contains different value
+console.log(person == personTwo); // false both the variables contain different memory address
+console.log(person === personTwo); // false both the variables contain different memory address
+console.log(person.address === personTwo.address); // false both person.address and personTwo.address contains diffrent memory address because in personTwo we are deep cloning the key person.address
+console.log(person.address == personTwo.address); // false both person.address and personTwo.address contains diffrent memory address because in personTwo we are deep cloning the key person.address
+console.log(personTwo.address.city); // "San Jose" The value of personTwo.address.city key is "San Jose
+```
+console.log(person.address.city); // "San Jose" The value of person.address.city key is "San Jose
+console.log(person.address.city == personTwo.address.city); // true both the keys contain the same value
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -102,6 +103,8 @@ let blogs = [
     body: 'My third blog post',
   },
 ];
+console.log(blogs[0]);
+let clonedBlogs = [...blogs, [...blogs[0]], [...blogs[1]], [...blogs[2]]];
 
 // Your code goes here
 ```
